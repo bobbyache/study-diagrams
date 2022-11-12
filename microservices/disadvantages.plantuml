@@ -1,0 +1,58 @@
+@startmindmap
+
+' Look for the Art of Scalability as a book Martin L Abbot
+
++ Microservice Disadvantages
+
+++ Many, many, options\nCan be bad if...
++++ organization makes one choice
+++++ Programming idiom
+++++ Achitectural Style
++++ slow pace of change and lots of beurocratic red tape
+++++ Leads to tension
+
+++ Takes a long time to get the benefits
++++ Lots of front-loading
+++++ teething issues
+++++ finding new things that needed automating
+++++ scripting
++++ from standing start
+++++ projected effort
++++++ 1st 2 services between 2 - 5 months 
++++++ another 12 months to get 10 out
++++++ 18 months = 60 microservices
++++ Not great returns in 1st 6 months
+
+
+++ Testing more complex
++++ Have to automate
++++ What kind of tests?
++++ Integration testing
+++++ Cannot rely as much on integration testing
+
+++ Monitoring more complex
++++ Is there a problem?
++++ Where is it?
+
+++ Resiliency is not free
++++ Easy to become less reliable
++++ Cascading failures due to a single network failure
+
+++ Lot more boxes
++++ One service per host or OS
+++++ Must automate management of infrastructure
++++++ Deployment
++++++ Configuration of environments
++++++ Many more moving parts
+
+++ Distributed systems are hard
++++ Knowledge required of
+++++ Consistency and linearizability
+++++ CAP theory
++++ Transactional shortcomings
+++++ re-examine requirements for transactional integrity
+++++ Conversations with users and stakeholders
+++++ Understand how system behavior will vary in different situations
+
+@endmindmap
+

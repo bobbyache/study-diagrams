@@ -1,0 +1,16 @@
+@startmindmap
+
++ Monoliths
+
+++ Have to run tests for entire system
+++ Have to deploy everything
++++ High degree of risk
++++ Changes made less often
++++ Larger the batch size the larger the risk
++++ Drives us toward single programming idiom
++++ Drives us towards single data store
++++ Difficult to cater for all mobile and non-mobile devices
+
+
+@endmindmap
+

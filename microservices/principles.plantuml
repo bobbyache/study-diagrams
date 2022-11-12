@@ -1,0 +1,22 @@
+
+@startmindmap
+
+' 12 factor app
+' https://12factor.net/
+
++ Microservices Principles
+++ Principle
++++ the idea
++++ Change lesss frequency
++++ Have an outcome you're trying to achieve
++++ The twelve factor horoko
++++ and in-house principles
+++++ must go towards what org is trying to achieve
+++ Practice
++++ Implementation of an idea
++++ Change frequently
+
+
+
+
+@endmindmap
