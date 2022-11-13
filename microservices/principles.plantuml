@@ -4,18 +4,28 @@
 ' 12 factor app
 ' https://12factor.net/
 
-+ Microservices Principles
-++ Principle
-+++ the idea
-+++ Change lesss frequency
-+++ Have an outcome you're trying to achieve
-+++ The twelve factor horoko
-+++ and in-house principles
-++++ must go towards what org is trying to achieve
-++ Practice
-+++ Implementation of an idea
-+++ Change frequently
+' + Microservices Principles
+' ++ Principle
+' +++ the idea
+' +++ Change lesss frequency
+' +++ Have an outcome you're trying to achieve
+' +++ The twelve factor horoko
+' +++ and in-house principles
+' ++++ must go towards what org is trying to achieve
+' ++ Practice
+' +++ Implementation of an idea
+' +++ Change frequently
 
+
++ Principles of Microservices
+-- Modelled around the business domain
+-- Highly observable
+-- Isolate Failure
+-- Consumer first
+++ Culture of automation
+++ Hide implementation details
+++ Deccentralize all things
+++ Deploy independently
 
 
 

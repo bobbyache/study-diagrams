@@ -1,0 +1,10 @@
+
+@startmindmap
+
++ Model around the business domain
+++ Don't structure around horizontal slices
+++ Slice vertically
++++ Layperson should be able to tell what a system does by looking at source code.
+
+
+@endmindmap
