@@ -17,27 +17,41 @@
 +++[#lightblue] isPrime
 ++++_ loop from 2 to n-1 using modulus to check for factor
 ++++_ use sqrt(n) efficiency trick
-++[#lightgreen] Frequency Counter
-+++[#lightblue] Is Anagram
-++++_ str 1 - Build hash map keyed on characters and their frequency
-++++_ str 2 - Check for exisence of char and negate frequency if found
-++++_ Ensure all hash map character frequency counts are zero
-+++[#lightblue] Most Frequent Character
-++++_ Iterate through the string, recording character counts in an (ordered) map
-++++_ Iterate through map to find maximum count\n(using max value logic), return the key
 
 ++[#lightgreen] Shifting Pointers
-+++[#lightblue] Uncompress
-++++_ Use while loop
-++++_ Use front pointer to determine end of numeric clusters
-++++_ Difference between front pointer and back pointer to parse number portion
-++++_ Inner for loop spread out character sequence
-+++[#lightblue] Compress
-++++_ Use while loop
-++++_ Use front pointer to determine end of streak
-++++_ Difference between front pointer and back pointer to determine number of compression
-+++[#lightblue] Backspace Compare
-++++_ Shift pointers from back to front
++++_ both left\nmove forward
+++++[#lightblue] Uncompress
++++++_ Use while loop
++++++_ Use front pointer to determine end of numeric clusters
++++++_ Difference between front pointer and back pointer to parse number portion
++++++_ Inner for loop spread out character sequence
+++++[#lightblue] Compress
++++++_ Use while loop
++++++_ Use front pointer to determine end of streak
++++++_ Difference between front pointer and back pointer to determine number of compression
++++_ outside in
+++++[#lightblue] Five Sort
++++++_ while pointers don't cross
++++++_ Decrement back pointer in until != 5
++++++_ Increment front pointer until 5, then swop with back pointer
++++_ both right\nmove backward 
+++++[#lightblue] Backspace Compare
++++++_ Shift pointers from back to front
+
+++[#lightgreen] Lookups
++++[#lightblue] Pair Sum & Pair Product
+++++_ Iterate once, store complement as key and index as value
+++++_ During this iteration, check that complement doesn't already exist...
+
++++[#lightgreen] Frequency Counter
+++++[#lightblue] Is Anagram
++++++_ str 1 - Build hash map keyed on characters and their frequency
++++++_ str 2 - Check for exisence of char and negate frequency if found
++++++_ Ensure all hash map character frequency counts are zero
+++++[#lightblue] Most Frequent Character
++++++_ Iterate through the string, recording character counts in an (ordered) map
++++++_ Iterate through map to find maximum count\n(using max value logic), return the key
+
 
 
 @endmindmap
