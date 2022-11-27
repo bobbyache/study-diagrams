@@ -1,4 +1,4 @@
-@startmindmap
+@startmindmap "Binary Trees"
 
 + Binary Trees
 ++_ Path finding, building paths, determining paths **best done recursively**
@@ -12,7 +12,8 @@
 +++[#lightgreen] Tree min sum
 
 ++[#lightgreen] Max Root to Leaf Path Sum
-+++_ Best solved with a depth-first, recursive approach
++++_ Best solved with a depth-first, **recursive approach**
++++_ base case: null nodes are -Infinity, take max child and add self
 
 ++[#lightgreen] Value count
 +++_ Base case null node returns 0
@@ -43,7 +44,7 @@
 +++[#lightgreen] Tree Path Finder
 ++++_ Solution is **recursive**
 ++++_ Returns an array of values
-++++_ Base cases should be null or a leave node value as single item array
+++++_ Base cases should be null or a leaf node if found
 ++++_ Avoid array building inefficiency
 +++++_ helper recursive function
 +++++_ push rather than shift

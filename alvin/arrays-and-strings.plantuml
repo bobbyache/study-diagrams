@@ -1,4 +1,4 @@
-@startmindmap
+@startmindmap "Arrays and Strings"
 
 + Arrays & Strings
 ++[#grey] Sorted
@@ -17,6 +17,17 @@
 +++[#lightblue] isPrime
 ++++_ loop from 2 to n-1 using modulus to check for factor
 ++++_ use sqrt(n) efficiency trick
++++[#lightblue] fibonacci
+++++_ anything below 2, just return the input number
+++++_ init cur = 1, prev = 0, total = 0
+++++_ begin loop at 2 and set total to cur + prev
+++++_ set cur = total and prev = cur
++++[#lightblue] factorial
+++++_ 5! = 5 * 4 * 3 * 2 * 1
+++++_ set total = 1 (avoid multiply by zero)
++++[#lightblue] best time to\nbuy and sell stock
+++++_ Simple iteration
+++++_ Track the min value (to buy), calculate profit by subtracting it from current item
 
 ++[#lightgreen] Shifting Pointers
 +++_ both left\nmove forward
@@ -30,10 +41,20 @@
 +++++_ Use front pointer to determine end of streak
 +++++_ Difference between front pointer and back pointer to determine number of compression
 +++_ outside in
+++++[#lightblue] Find closest pair sum
++++++_ move left or right pointer inwards depending on whether > or < to target
 ++++[#lightblue] Five Sort
 +++++_ while pointers don't cross
 +++++_ Decrement back pointer in until != 5
 +++++_ Increment front pointer until 5, then swop with back pointer
+
+++++[#lightblue] Move Zeros
++++++_ **swap** without changing array
++++++_ left pointer sits on a current zero
++++++_ right pointer scouts for a non-zero
++++++_ if not shifting together (on zeros), all positions between should be zeros\n(including the left pointer position)
++++++[#lightgreen] Remove element
+++++++_ in place swap and return new length (exact same algorithm)
 +++_ both right\nmove backward 
 ++++[#lightblue] Backspace Compare
 +++++_ Shift pointers from back to front
