@@ -40,14 +40,6 @@
 +++++_ Use while loop
 +++++_ Use front pointer to determine end of streak
 +++++_ Difference between front pointer and back pointer to determine number of compression
-+++_ outside in
-++++[#lightblue] Find closest pair sum
-+++++_ move left or right pointer inwards depending on whether > or < to target
-++++[#lightblue] Five Sort
-+++++_ while pointers don't cross
-+++++_ Decrement back pointer in until != 5
-+++++_ Increment front pointer until 5, then swop with back pointer
-
 ++++[#lightblue] Move Zeros
 +++++_ **swap** without changing array
 +++++_ left pointer sits on a current zero
@@ -55,6 +47,27 @@
 +++++_ if not shifting together (on zeros), all positions between should be zeros\n(including the left pointer position)
 +++++[#lightgreen] Remove element
 ++++++_ in place swap and return new length (exact same algorithm)
+
+
+
++++_ outside in
+++++[#lightblue] Find closest pair sum
++++++_ move left or right pointer inwards depending on whether > or < to target
++++++[#lightblue] Find pair that sums to
+++++++_ if found return true
++++++[#lightblue] Sum Zero
+++++++_ return two values that sum to zero
+++++[#lightblue] Five Sort
++++++_ while pointers don't cross
++++++_ Decrement back pointer in until != 5
++++++_ Increment front pointer until 5, then swop with back pointer
+
++++_ keep halving
+++++[#lightblue] Binary Search
++++++[#lightblue] Search Insert Position
+++++++_ binary search to find at index (until pointers cross)
+++++++_ calculate position of insertion when not found
+
 +++_ both right\nmove backward 
 ++++[#lightblue] Backspace Compare
 +++++_ Shift pointers from back to front
@@ -72,8 +85,10 @@
 ++++[#lightblue] Most Frequent Character
 +++++_ Iterate through the string, recording character counts in an (ordered) map
 +++++_ Iterate through map to find maximum count\n(using max value logic), return the key
-
-
+++++[#lightblue] Same array, but squared
++++++_ Use 2 maps store values from both arrays
++++++_ Store both values and their frequencies
++++++_ Cycle through 1 and check that its counterpart in the other map is itself squared
 
 @endmindmap
 
