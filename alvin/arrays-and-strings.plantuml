@@ -26,8 +26,8 @@
 ++++_ 5! = 5 * 4 * 3 * 2 * 1
 ++++_ set total = 1 (avoid multiply by zero)
 +++[#lightblue] best time to\nbuy and sell stock
-++++_ Simple iteration
-++++_ Track the min value (to buy), calculate profit by subtracting it from current item
+++++_ Simple iteration: track min and profit
+++++_ min logic on "min" OR  max logic on cur index - min, return profit
 
 ++[#lightgreen] Shifting Pointers
 +++_ both left\nmove forward
@@ -49,10 +49,9 @@
 ++++++_ in place swap and return new length (exact same algorithm)
 
 
-
 +++_ outside in
 ++++[#lightblue] Find closest pair sum
-+++++_ move left or right pointer inwards depending on whether > or < to target
++++++_ move inwards depending on whether > or < to target
 +++++[#lightblue] Find pair that sums to
 ++++++_ if found return true
 +++++[#lightblue] Sum Zero
@@ -61,12 +60,26 @@
 +++++_ while pointers don't cross
 +++++_ Decrement back pointer in until != 5
 +++++_ Increment front pointer until 5, then swop with back pointer
+++++[#lightblue] Container with most water
++++++_ move inwards from smaller of two heights
++++++_ min of heights * (right - left)
++++++_ max logic on maxArea
+
+' Busy editing this in place...
+
+++++[#lightblue] Trapping rainwater
++++++_ move inwards from smaller of two heights
++++++_ smaller wall determines current height of water (smaller wall - cur height)
++++++_ while moving the smaller height inwards - know the other must be a wall
++++++_ trappable_water = min(maxL, maxR) - current_height
 
 +++_ keep halving
 ++++[#lightblue] Binary Search
-+++++[#lightblue] Search Insert Position
-++++++_ binary search to find at index (until pointers cross)
-++++++_ calculate position of insertion when not found
+++++_ Keep going until pointers cross (left <= right)
+++++[#lightblue] Search Insert Position
++++++_ binary search to find at index (until pointers cross)
++++++_ calculate position of insertion\nwhen not found
+++++++_ its < vals[mid] then mid, else mid + 1
 
 +++_ both right\nmove backward 
 ++++[#lightblue] Backspace Compare
