@@ -1,25 +1,13 @@
 @startmindmap "Arrays and Strings"
 
 + Arrays & Strings
-++[#grey] Sorted
-+++_ **yes**
-++++_ find
-+++++_ binary search
-++++[#lightgreen] Remove Duplicates
-+++++_ edit in place using shifting pointers
-+++_ **no**
-++++[#lightgreen] find contigious sub-array
-+++++_ Kaldane's algorithm
-+++++_ Sliding window (concertina)
-++++_ Find 2 numbers\nto sum to input
-+++++_ Inverse hash lookup
 ++[#lightgreen] Simple
 +++[#lightblue] isPrime
 ++++_ loop from 2 to n-1 using modulus to check for factor
 ++++_ use sqrt(n) efficiency trick
 +++[#lightblue] fibonacci
 ++++_ anything below 2, just return the input number
-++++_ init cur = 1, prev = 0, total = 0
+++++_ init prev = 0, cur = 1, total = 0
 ++++_ begin loop at 2 and set total to cur + prev
 ++++_ set cur = total and prev = cur
 +++[#lightblue] factorial
@@ -28,6 +16,10 @@
 +++[#lightblue] best time to\nbuy and sell stock
 ++++_ Simple iteration: track min and profit
 ++++_ min logic on "min" OR  max logic on cur index - min, return profit
+
+++[#lightgreen] Dynamic Programming
++++[#lightgreen] find max contigious sub-array
+++++_ Kaldane's algorithm
 
 ++[#lightgreen] Shifting Pointers
 +++_ both left\nmove forward
@@ -47,7 +39,10 @@
 +++++_ if not shifting together (on zeros), all positions between should be zeros\n(including the left pointer position)
 +++++[#lightgreen] Remove element
 ++++++_ in place swap and return new length (exact same algorithm)
-
++++++[#lightgreen] Remove Duplicates
+++++++_ store last number moved and overwrite index
+++++++_ move forward with scout pointer and\nreplace new numbers at overwrite index
+++++++_ Increment the overwrite index every\ntime it changes, in the end return it
 
 +++_ outside in
 ++++[#lightblue] Find closest pair sum
@@ -75,11 +70,13 @@
 
 +++_ keep halving
 ++++[#lightblue] Binary Search
-++++_ Keep going until pointers cross (left <= right)
-++++[#lightblue] Search Insert Position
-+++++_ binary search to find at index (until pointers cross)
-+++++_ calculate position of insertion\nwhen not found
-++++++_ its < vals[mid] then mid, else mid + 1
++++++_ Keep going until pointers cross (left <= right)
+++++++_ smaller? new right is middle - 1
+++++++_ larger? new left is middle + 1
++++++[#lightblue] Search Insert Position
+++++++_ binary search to find at index (until pointers cross)
+++++++_ calculate position of insertion\nwhen not found
++++++++_ its < vals[mid] then mid, else mid + 1
 
 +++_ both right\nmove backward 
 ++++[#lightblue] Backspace Compare
