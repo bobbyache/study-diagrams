@@ -1,0 +1,64 @@
+
+@startmindmap "Networking"
+
++ Networking
+
+++ Protocol
++++_ Agreed upon set of rules between two parties (computers)
+++++_ Kinds of messages
+++++_ format of messages
+++++_ order of messages
+++++_ for both requests and responses
+
++++_ Coms between two machines
+++++_ clients and servers
+++++_ peer to peer
+
+
++++ Popular ones
+
+
+++++ IP
++++++_ Internet Protocol
++++++_ IP Packet
+++++++_ Fundamental unit of data\nmade up of bytes
+++++++_ Size = 2 ^ 16 bytes (approx 65 000 bytes)
+++++++_ 2 main sections
++++++++_ header
+++++++++_ 20 - 60 bytes
+++++++++_ source IP
+++++++++_ destination IP
+++++++++_ total size of packet
+++++++++_ version of IP protocol (IPV4, IPV6)
++++++++_ data
++++++_ Sends lots of IP packets
+++++++_ No sense of order
+++++++_ No guarantee, some might get lost
+
+
+++++ TCP
++++++_ Transmission Control Protocol
++++++_ Built on top of IP
++++++_ Sent in an ordered way
++++++_ Guarantee will get packet or be notified - can request resend to complete
++++++_ Adds more bytes for TCP header (adjacent to IP header)
+
+++++ HTTP
++++++_ HyperText Transfer Protocol
++++++_ Builds on top of TCP
++++++_ Higher level of abstraction
++++++_ Request/Response paradigm\nwith set of accompanied rules
++++++_ Request
+++++++_ host
+++++++_ port
+++++++_ method (GET, PUT...)
+++++++_ path
++++++++_ api to service business operations 
+++++++_ headers
+++++++_ body
++++++_ Response
+++++++_ status code
+++++++_ headers
+++++++_ body
+
+@endmindmap

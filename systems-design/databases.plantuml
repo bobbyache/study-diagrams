@@ -1,0 +1,12 @@
+@startmindmap "Databases"
+
++ Databases
+++_ Store and retrieve data
+++_ A database is just a server
++++_ Persitance to...
+++++_ memory - volatile and will be lost with a crash
+++++_ disk - once persisted, can be retrieved after crash
++++_ no sql - could be used as in-memory cache
+++++_ distributed caching (Redis)
+
+@endmindmap

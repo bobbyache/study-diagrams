@@ -1,0 +1,45 @@
+@startmindmap "Availability"
+
++ Availability
+++ How resistant to failure (fault tolerance)
++++ Service or database
+
+++ Services usually have an implied guarantee
+++ expected to be operational
+++ different expectations - downtime unacceptable
++++ airplane software
++++ cloud providers
+
+++ Measure
++++ % of systems uptime in a year
++++ Very high percentage so just being in 90% range not enough
++++ Measured in 9s
+++++ 99.999 (5 nines)
++++++ gold standard (highly available)
++++++ 5.26 min downtime in year
+
+++ Consequences
+
++++ SLA = Service level agreement
+++++ Explicit promise of system availability
++++++ has trade-offs
+++++++ higher latency
+++++++ less throughput
++++ SLO = Service level objectives
++++ SLA made up of SLOs
+
+++ Create availability
++++ if no single point of failure
++++ Solved with redundancy (duplicate/triplicate services)
++++ A single load balancer can be a single point of failure
+++++ Types
++++++ Passive redundancy
+++++++ Have three load balancers
++++++ Active redundancy
+++++++ Multiple machines with only 1 or a few working
+++++++ 1 fails, another takes its place
++++++++_ docker swarms
++++++++_ leader election 
+
+
+@endmindmap
