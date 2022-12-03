@@ -1,0 +1,26 @@
+
+@startmindmap "System Designs Overview"
+
++ Systems Design
+++ Networking
++++_ clients and servers
++++_ peer to peer
++++_ IP
+++++_ IP packets
++++++_ No sense of order, no guarantee
++++++_ No guarantee, some might get lost
+
+
++++_ TCP (transmission control protocol)
+++++_ Built on top of IP, Ordered and guaranteed
+
++++_ HTTP (hypertext transfer protocol)
+++++_ Builds on top of TCP
+
+-- Caching
+---_ consistent caching
+----_ around circle
+---_ rondezvous caching
+----_ highest score
+
+@endmindmap

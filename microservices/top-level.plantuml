@@ -1,4 +1,4 @@
-@startmindmap
+@startmindmap "Microservices"
 
 + Microservices
 
@@ -45,23 +45,6 @@
 +++++ Transactions are distributed and much more difficult
 +++++ You may have to ditch transactions and the safety they bring
 ++++ New technologies can be used badly
-
-
-
-' ++_ Path finding, building paths, determining paths **best done recursively**
-' ++_ With recursion, establish consistent type for base cases
-' ++_ Trees never have cycles.
-
-' ++ Basic Traversals
-' +++ Can be done iteratively (breadth or depth-first)\n...and recursively
-' +++[#lightgreen] Tree sum
-' +++[#lightgreen] Tree includes
-' +++[#lightgreen] Tree min sum
-
-
-
-
-
 
 @endmindmap
 
