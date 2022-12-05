@@ -1,0 +1,34 @@
+@startuml "Order Assignment"
+
+database Database {
+    file warehouse_stock
+    file aggregated_stock
+    file orders
+}
+
+node OrderAssignmentService
+node WarehouseApi_1
+node WarehouseApi_2
+node LoadBalancer
+
+Database <-- OrderAssignmentService
+
+OrderAssignmentService <-- WarehouseApi_1
+note left
+    API Servers
+end note
+OrderAssignmentService <-- WarehouseApi_2
+
+WarehouseApi_1 <-- LoadBalancer
+WarehouseApi_2 <-- LoadBalancer
+note left
+    round robin
+end note
+
+LoadBalancer <-- warehouse_1
+note left
+    web applications
+end note
+LoadBalancer <-- warehouse_2
+
+@enduml

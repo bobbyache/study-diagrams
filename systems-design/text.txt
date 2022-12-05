@@ -1,6 +1,0 @@
-++++ header
-+++++_ text
-++++++_ text
-+++++++_ header
-++++++++_ text
-++++++++_ text

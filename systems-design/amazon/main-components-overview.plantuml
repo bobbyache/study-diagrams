@@ -1,0 +1,24 @@
+
+@startmindmap "Design Amazon - Main Components Overview"
+
++ **Amazon**
+++ Website
++++ Home Page
+++++ Recommended Items
++++ Search
+++++ Items
+++++ Browse lists
++++ Product Page
+++++ Reviews
+++++ Product Info
++++ Cart
++++ Wishlist
++++ Account
+-- Payments
+-- Orders
+--- Warehouse sub-orders\n(based on stock location)
+-- Shipping/Transportation/Delivery
+-- Stock
+--- Warehouses
+
+@endmindmap

@@ -1,0 +1,64 @@
+@startuml "Test"
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "Items" as items {
+  *id: uuid
+  --
+  name: string
+  desc: string
+  price: integer
+  currency: enum
+  other...
+  ...
+}
+
+entity "Carts" as carts {
+  *id : uuid
+  --
+  customer_id : uuid
+  items: [] (id, quantity)
+}
+
+entity "Orders" as orders {
+    *id: uuid
+    --
+    customer_id: uuid <<FK>>
+    status: enum
+    items: [] (id, quantity)
+    price: money
+    payment_info
+    ship_address
+    ...
+}
+
+entity "AggregatedStock" as sched {
+  *id
+  --
+  count
+}
+
+entity "WarehouseStock" as whstock {
+    item_id: uuid
+    warehouse_id: uuid
+    physical_stock: integer
+    available_stock: integer
+}
+
+entity "WarehouseOrders" as whorders {
+    id
+    ---
+    parent_order_id
+    warehouse_id
+    status
+    items <<FK>> (id, qty)
+    ship_address
+    ...
+}
+
+
+@enduml
