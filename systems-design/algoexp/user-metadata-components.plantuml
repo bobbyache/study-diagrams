@@ -1,0 +1,63 @@
+@startuml "Auxilliary Services"
+
+cloud dns as "Regional DNS Load balancer"
+
+actor user
+boundary website as "Website"
+node websitecache as "User metadata cache"
+
+boundary path <<load balancer>> as "Path-based\nLoad balancer"
+note right
+    round robin path-based load balancing
+end note
+
+node databases as "Databases" {
+    database blobstore <<blob>> as "Static questions list"
+    database usercontent <<relational db>> as "User Content" {
+        database question_completion
+        database question_status
+    }
+}
+
+node "User Metatdata Cluster" {
+    node api1 as "Service 1" {
+        database cache <<cache>> as "(in memory)\nstatic question list"
+    }
+    node api2 as "Service 2"
+}
+
+cloud acl as "ACL (OAuth)"
+
+user -right-> website
+website --> websitecache
+website -right-> dns
+dns -right-> path
+
+path -up-> api1
+path -up-> api2
+api1 --> acl
+
+api1 -up-> blobstore
+api1 -up-> usercontent
+
+' cloud acl as "ACL (OAuth)"
+
+' node cluster {
+
+'     node api2 as "User Api"
+'     node api1 as "User Api" {
+'         database cache
+'         note right
+'             cache server side\nstatic questions
+'         end note
+'     }
+'     database blobstore as "Static questions list"
+
+'     note left
+'         Paid customers or non-paid customers
+'     end note
+'     api1 -down-> blobstore
+' }
+' api1 -down-> acl
+@enduml
+    
