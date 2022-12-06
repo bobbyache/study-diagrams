@@ -1,0 +1,16 @@
+
+@startmindmap "AlgoExpert - Main Components Overview"
+' Home page, purchase page, questions page, code execution engine
+' authentication - stripe, oauth 2
+
++ **AlgoExpert**
+++ Website
++++ Purchase Page
++++ Home Page
++++ Questions Page
++++ Type Code/Run Code
+-- Auth (OAuth 2)
+-- Payments (Stripe)
+
+
+@endmindmap

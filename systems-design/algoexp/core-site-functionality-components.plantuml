@@ -1,0 +1,50 @@
+@startuml "Core Site Functionality"
+
+'UI static content (JavaScript, Pages, CSS, Images)
+'(GCS, S3, Azure blob storage)
+database blobstore as "Blob Store" {
+    database JavaScript
+    database Images
+    database Pages
+}
+note right
+    Website static content
+end note
+
+'Regional CDN
+cloud cdn as "Regional CDN (Cloudflare)"
+note left
+    CDN to fetch cached
+    regional static content
+end note
+
+cloud dns as "Regional DNS Load balancer"
+
+actor user
+boundary website as "Website"
+
+node path as "Path-based Load balancer" {
+    rectangle "/api/code\n/api/questions/\n/api/auth/"
+}
+
+cloud {
+    boundary auth as "Auth"
+    boundary codeexec as "Code Execution"
+    boundary userdata as "User Metadata"
+}
+note left
+    Path-based load balancer routes requests to
+    their various dedicated service clusters
+end note
+
+user -right-> website
+website -up-> cdn
+cdn -up-> blobstore
+website -right-> dns
+dns -right-> path
+
+path --> auth
+path --> codeexec
+path --> userdata
+
+@enduml
