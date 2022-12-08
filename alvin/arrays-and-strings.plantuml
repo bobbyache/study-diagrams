@@ -19,7 +19,9 @@
 
 ++[#lightgreen] Dynamic Programming
 +++[#lightgreen] find max contigious sub-array
-++++_ Kaldane's algorithm
+++++_ **Kadane's algorithm**
+++++_ maxEndingHere = max(maxEndingHere + cur_num, cur_num)
+++++_ maxSoFar = max(maxEndingHere, maxSoFar)
 
 ++[#lightgreen] Shifting Pointers
 +++_ both left\nmove forward
@@ -46,6 +48,7 @@
 
 +++_ outside in
 ++++[#lightblue] Find closest pair sum
++++++_ Must be **sorted**
 +++++_ move inwards depending on whether > or < to target
 +++++[#lightblue] Find pair that sums to
 ++++++_ if found return true
@@ -82,6 +85,12 @@
 ++++[#lightblue] Backspace Compare
 +++++_ Shift pointers from back to front
 
++++_ 3 pointers
+++++[#lightblue] Three Number Sum
++++++_ Main traversal pointer (i) iterates from start to finish
++++++_ left initializes to 1 ahead and right initializes at end of array
++++++_ Left and right move inwards (i + left + right)
+
 ++[#lightgreen] Lookups
 +++[#lightblue] Pair Sum & Pair Product
 ++++_ Iterate once, store complement as key and index as value
@@ -100,5 +109,10 @@
 +++++_ Store both values and their frequencies
 +++++_ Cycle through 1 and check that its counterpart in the other map is itself squared
 
+++[#lightgreen] Sliding Window
++++[#lightblue] Minimum Sub-array Length
+++++_ Initialize the window by traversing until the sum of values is >= the target
+++++_ Start creeping it forwards by subtracting the left pointer value and shift it up by 1
+++++_ At the same time, apply min/max logic on the width.
 @endmindmap
 
