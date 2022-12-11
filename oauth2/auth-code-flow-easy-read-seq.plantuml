@@ -1,0 +1,24 @@
+@startuml "Auth Code Flow"
+
+actor user as "User"
+boundary app as "Application"
+boundary auth as "Auth Server"
+
+note over user, app
+    front channel
+end note
+user -> app: I'd like to use this great app
+app -> user: Go to auth server to\ngrant me access to your contacts
+user -> auth: I'd like this app to access my contacts
+auth -> user: Here's the challenge screen
+user -> auth: Here's my credentials
+auth -> user: Here's a temporary code for your app to use
+user -> app: Here is the temporary code\nuse this to get a token
+
+note over app, auth
+    back channel
+end note
+app -> auth: Here is the code\nPlease give me a token
+auth -> app: Your code looks good I just issued it\nand your client_secret checks out. Here is your token
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml "PKCE Proof-key for Code Exchange"
+
+actor user as "User"
+boundary app as "Application"
+boundary auth as "Auth Server"
+
+note over user, app
+    front channel
+end note
+user -> app: I'd like to use this great app
+app -> app: Hang on while I generate\na new secret and hash it
+app -> user: Go to auth server to grant me access\nand take this hash with you
+
+user -> auth: I'd like to log into this app **here is the hashed secret it gave me**
+auth -> user: Here's the challenge screen **I'll remember the hashed secret**
+user -> auth: Here's my credentials
+auth -> user: Here's a temporary code
+user -> app: Here is the temporary code\nuse this to get a token
+
+note over app, auth
+    back channel
+end note
+app -> auth: Here is the code and the plain text secret\nPlease give me a token
+auth -> app: Your code checks out and your\nhashed plain text **secret matches my hash**\nHere is your access token
+
+@enduml
