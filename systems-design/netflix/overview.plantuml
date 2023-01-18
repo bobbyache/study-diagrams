@@ -1,0 +1,15 @@
+
+@startmindmap "System Designs Overview"
+
++ Systems Design
+++ core user flow (video)
++++ care about latency
++++ global audience
+++++ 200 million users
++++++_ globally distributed
++++ highly available
+++ recommendation engine
++++ dont' care too much about latency
++++ happens in background
+
+@endmindmap

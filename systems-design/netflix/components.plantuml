@@ -1,0 +1,35 @@
+
+@startmindmap "System Designs Overview"
+
++ Video
+++ Data
++++ video
+++++_ 10,000 videos
++++++_ average 1 hour in length
++++++_ store in std and hd resolution
+++++++_ SD -> 10 Gb/h
+++++++_ HD -> 20 Gb/h
++++++_ storage not so bad, S3 blob storage
+
++++ user metadata
+++++_ 200 Million Users
+++++_ stored at video level
+++++_ watched, liked, rated. How many times watched.
+++++_ 100 bytes per video per user * 1000 = 100 Kb * 200 000 000 = 20 Terabytes
++++ static content
+++++ storage
++++++_ static content for every video
++++++_ key/value store or simple database=
+++++_ names of movies and shows, cast, thumbnails
++++ user events (clicks on data) and logs
+
+++ Streaming
++++_ 50 Terabytes per second bandwidth consumption.
++++_ Need to spread the load
++++_ Use CDN for video sharing (Cloudflare) (22:40)
+
+
++ Recommendation Engine
+
+
+@endmindmap

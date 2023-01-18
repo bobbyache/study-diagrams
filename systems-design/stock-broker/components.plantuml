@@ -1,0 +1,46 @@
+@startmindmap "Design a Stockbroker - Overview"
+' Home page, purchase page, questions page, code execution engine
+' authentication - stripe, oauth 2
+
++ **Stockbroker**
+++ Design the API call
++++ Request
+++++_ customer id
+++++_ stock ticker
+++++_ type (buy or sell)?
+++++_ quantity
++++ Response
+++++_ order id
+++++_ stock ticker
+++++_ type (buy or sell?)
+++++_ quantity
+++++_ status
+++++_ failure reason
+++++_ created at
+
+++ Design the backend servers
++++ SQL Tables
+++++ Trades
++++++_ id
++++++_ customer id
++++++_ stock ticker
++++++_ type
++++++_ quantity
++++++_ status
++++++_ Failure reason
++++++_ created at
+++++ Balances
++++++_ id
++++++_ customer id
+++++_ amount
+++++_ last modified
+
+++ Design the trade execution engine
++++_ communicating with exchange
+
+
+@endmindmap
+
+
+' So go with round robin load balancing when you do not have any caching and it is not important that 
+' subsequent calls go to the same server from the same client.

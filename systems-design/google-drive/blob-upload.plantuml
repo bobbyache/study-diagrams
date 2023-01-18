@@ -1,0 +1,48 @@
+@startuml
+
+actor user
+usecase create as "create folder"
+boundary lb as "Load Balancer"
+collections apis as "API Servers"
+boundary lb2 as "Load Balancers"
+collections prox as "Blob (Caching) Proxies"
+collections blob as "Blob Stores"
+component repl as "Async Replication Controller"
+collections blob2 as "Blob Stores"
+
+user - create
+create -down- lb
+note left
+    Round robin
+end note
+lb -down- apis
+note left
+    Blob splitters
+    Split the blob into parts...
+    ...and hash its contents
+end note
+apis -down- lb2
+note left
+    Compression or caching or further processing
+    Load balance on blob hash
+end note
+lb2 -down- prox
+note left
+    Content-based storage on the hash of the blob
+    (immutable)
+end note
+prox -down- blob
+note left
+    3 duplicated (at minimum)
+    ... sync replication (diff regions)
+    (behind them could be asyc replication)
+end note
+blob -down- repl
+note left
+    Replicate data to the lower blob storages
+end note
+repl -down- blob2
+note left
+    Redundant blob stores
+end note
+@enduml

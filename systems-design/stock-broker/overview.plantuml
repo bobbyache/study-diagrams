@@ -1,0 +1,13 @@
+@startmindmap "Design a Stockbroker - Overview"
+
++ **Stockbroker**
+++ Market orders stocks
++++ PlaceTrade API call
+++ SQL table for customer balances
+++ Millions of customers (U.S. only)
+++ Milions of trades per day
+++ High availability
+++ Callback from exchange's API on completion (guaranteed)
+
+
+@endmindmap

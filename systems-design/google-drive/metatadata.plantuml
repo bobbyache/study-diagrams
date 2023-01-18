@@ -1,0 +1,23 @@
+@startuml
+
+actor user
+usecase create as "create folder"
+boundary lb as "load balancer"
+collections proxies
+collections kv as "Key-value stores"
+
+user - create
+create -down- lb
+note left
+    Based on Owner Id
+end note
+lb -down- proxies
+note left
+    ACL (Permissions) and other...
+    Move to K/V stores
+end note
+proxies -down- kv
+note left
+    Sharded on Owner Id
+end note
+@enduml

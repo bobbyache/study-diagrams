@@ -45,6 +45,8 @@
 ++++++_ store last number moved and overwrite index
 ++++++_ move forward with scout pointer and\nreplace new numbers at overwrite index
 ++++++_ Increment the overwrite index every\ntime it changes, in the end return it
+++++++[#lightgreen] Remove Duplicates II
++++++++_ Can be solved in much the same way...\nin fact both can be solved almost identically
 
 +++_ outside in
 ++++[#lightblue] Find closest pair sum
