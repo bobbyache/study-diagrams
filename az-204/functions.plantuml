@@ -1,0 +1,28 @@
+@startmindmap "Dynamic Programming"
+
++ Azure Functions
+++ logically organized\nAzure Function App
++++ Std SKU storage account
++++ Function\n(Templates)
+++++ Http Triggered
+++++ Timer Triggered
+++++ Events, service queues and busses,\nCosmos DB and Blob Storage,\nEvent Grid and Event Hub
+++ Runtimes
++++ .Net, Java (compiled)
+++++ config generated
++++ .Node.js, PowerShell, Python
+++++ requires function.json
++++ Custom Handler (GO, Ruby, PHP, Rust)\(nunsupported)
+-- Plans
+--- Consumption Plan (Serverless)
+---- Cold starts
+---- Billed on no., duration, memory\nof executions
+--- Premium Plan
+---- Pre-warmed always running\nreact instantly
+---- Billed for warmed instances + scaling out
+--- Dedicated Plan (App Service Plan)
+---- VM Sharing
+---- Reuse existing, underutilized VMs
+
+
+@endmindmap
