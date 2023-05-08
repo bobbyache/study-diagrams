@@ -1,0 +1,21 @@
+@startmindmap "Cosmos DB Structure"
+
++ Cosmos DB\nStructure
+++ Account
++++_ Fundamental unit of scalablity (throughput and availability).
++++_ Partitions containers using a partition key
++++_ Regions can be added and removed any time
++++_ Unique DNS name
++++_ Soft max. of 50 accounts per subscription
++++ Database
+++++_ Namespace / logical management of containers
+++++ Container
++++++_ Unit of scalability for provisioned throughput and storage
++++++_ Items grouped into logical partitioned\n  distributed across physical partitions\n  based on partition key
++++++_ **Modes**
+++++++_ Dedicated provisioned throughput mode
+++++++_ Shared provisioned throughput mode\n Shared with other database containers
++++++ Items
+++++++_ documents, rows, or graph node or edge
+
+@endmindmap

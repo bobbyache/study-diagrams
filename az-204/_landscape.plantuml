@@ -1,0 +1,47 @@
+@startmindmap "Landscape"
+
++ Landscape
+++ Storage
++++_ Microsoft Azure Data Factory
+
++++ Azure Cosmos DB
+++++_ Language-specific SDKs
+++++_ Azure Cosmos TLA+ Specification\n    5 consistency levels
+++++ Database APIs
++++++_ No SQL
++++++_ MongoDB
++++++_ PostgreSQL
++++++_ Appache Cassandra
++++++_ Table
++++++_ Apache Gremlin
+
+++ Security
++++ Auth
+++++_ MS Identity Platform
++++++_ Managed Identity Resource Provider
++++++_ MS Entra
++++++_ Azure AD Connect
+++++_ MS Graph\n(REST API + SDKs)
++++++_ REST and OData
++++++_ MS Graph connectors (Google Drive, Jira, Box, ...)
++++++_ MS Graph Data Connect
++++++_ API
+++++++_ MS PowerShell (REST)
+++++++_ MS Graph PowerShell SDK
+++++++_ MS Graph Explorer
+++++++_ Postman
+
+++ Key Vaults
++++_ Managed HSM Pools
++++_ APIs
+++++_ Key Vault SDK\nAzure Identity Client Library
+++++_ .NET = Azure Identity SDK.NET
+++++_ Python = Azure Identity SDK Python
+++++_ Azure Identity SDK JavaScript
+
++ Logging
+++_ Azure Monitor
+
+
+
+@endmindmap

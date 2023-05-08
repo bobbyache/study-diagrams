@@ -1,20 +1,20 @@
-@startmindmap "Dynamic Programming"
+@startmindmap "Containers"
 
 + Containers
-++ Common Resources
+++ Common\nResources
 +++ Container Instances
-++++ Quick and dirty (prototypes not scalable)
+++++_ Quick and dirty (prototypes not scalable)
 +++ Web Apps for Containers
-++++ More options + scalable
+++++_ More options + scalable
 +++ Container Registry
-++++ Azure image directory used to spin up\ncontainer instances and container web apps
+++++_ Azure image directory used to spin up\ncontainer instances and container web apps
 +++ Azure Kubernetes
 +++ Azure Service Fabric
-++++ Distributed platform\nPackage deploy, and manage microservices and containers
--- Plans
---- Basic
---- Standard
---- Premium
+++++_ Distributed platform\nPackage deploy, and manage microservices\nand containers
+++ Plans
++++ Basic
++++ Standard
++++ Premium
 
 
 @endmindmap
