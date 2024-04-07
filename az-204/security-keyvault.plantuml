@@ -7,7 +7,7 @@
 +++_ certificates (SSL/TLS)
 ++ 2 types
 +++_ Vaults
-+++_ Managed HSM Pools
++++_ Managed Hardware Security Module (HSM) Pools
 
 ++ Benefits
 +++_ Centralized application secrets

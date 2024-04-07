@@ -3,6 +3,8 @@
 + Landscape
 ++ Storage
 +++_ Microsoft Azure Data Factory
++++ SDKs
+++++_ Azure.Storage.Blobs
 
 +++ Azure Cosmos DB
 ++++_ Language-specific SDKs
@@ -21,6 +23,9 @@
 +++++_ Managed Identity Resource Provider
 +++++_ MS Entra
 +++++_ Azure AD Connect
++++++ SDKs
+++++++_ Azure.Identity
+++++++_ Azure.Secret.KeyVault.Secrets
 ++++_ MS Graph\n(REST API + SDKs)
 +++++_ REST and OData
 +++++_ MS Graph connectors (Google Drive, Jira, Box, ...)
@@ -30,18 +35,66 @@
 ++++++_ MS Graph PowerShell SDK
 ++++++_ MS Graph Explorer
 ++++++_ Postman
++++ Azure App Configuration
+++++ App Configuration store
++++++_ Hierarchical (:) Key + Label -- Value
+++++ Feature Manager
++++++_ Manages lifecycle of feature flags
++++++_ additionally handles caching and updating of their states
++++++_ Two Components
+++++++_ Application support
+++++++_ Seperate repository to store feature flags and current states
++++++ Feature Flag
+++++++_ Multiple filters
+++++++_ If one filter on, flag is on. If none are on, flag is off.
+++++++_ Feature manager supports **appSettings.json**.
+
 
 ++ Key Vaults
 +++_ Managed HSM Pools
 +++_ APIs
-++++_ Key Vault SDK\nAzure Identity Client Library
-++++_ .NET = Azure Identity SDK.NET
-++++_ Python = Azure Identity SDK Python
-++++_ Azure Identity SDK JavaScript
+++++_ Key Vault SDK uses...\n    Azure Identity Client Library
++++++_ .NET = Azure Identity SDK.NET
++++++_ Python = Azure Identity SDK Python
++++++_ Azure Identity SDK JavaScript
+
+++ Governance
++++_ Templates
++++_ Blueprints
+
+++ Resiliancy
++++ Paired regions
+++++_ Always use at least 2 regions
+++++_ Updates not applied simultanously to both
+++++_ Two instances on Availability Sets or Availability Zones
+
+++ App Service Plan (PaaS)
++++_ App Services (Web Apps)
++++_ Supports Web apps, REST APIs, and mobile backends
++++_ Heroku equivalent on Azure
+++++ Deployment
++++++_ Deployment slots (blue/green deployment)
++++++ Azure Resource Manager (ARM Templates)
++++ App Service Environment (ASE)
+++++_ Isolated deployed into VNET
+++++_ Highly scalable, dedicated. External or internal load balancer
++++ WebJobs
+++++_ Run scripts within Azure App Service
+++++_ Continuous and triggered
 
 + Logging
 ++_ Azure Monitor
 
++ Networks
+++ Microsoft backbone network
++++_ Access only via VPN or ExpressRoute
++++_ Virtual Network (VNet) for private endpoints
++++_ Eliminates exposure to public internet
++++_ Connect using VPN or ExpressRoutes with private peering
 
++ Azure API Management
+
++ Load Balancing
+++ Traffic Manager
 
 @endmindmap
