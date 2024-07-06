@@ -1,0 +1,18 @@
+@startmindmap "Angular Concepts"
+
++ Concepts
+++ Components
+++ Directives
++++ Strutural Directives
+++++ Core
++++++_ ngIf
++++++_ ngFor
++++++_ ngSwitch
++++++_ [ngClass]
++++++_ [ngStyle]
++++++_ [ng-container]
++++ Attribute Directives
+++++ d
+++ Pipes
+
+@endmindmap
