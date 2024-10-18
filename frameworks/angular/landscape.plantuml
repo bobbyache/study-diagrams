@@ -14,5 +14,7 @@
 +++ Attribute Directives
 ++++ d
 ++ Pipes
+++ Dependency Injection
++++ Injection Token, Factory functions, Providers and @Inject
 
 @endmindmap
