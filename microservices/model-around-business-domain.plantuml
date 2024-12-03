@@ -1,10 +1,33 @@
 
-@startmindmap
+@startmindmap "Model around the business domain"
 
-+ Model around the business domain
-++ Don't structure around horizontal slices
++ Modelling Approach
+++ Avoid horizontal layers\n(presentation, business logic, data access)
++++_ Problems include...
+++++_ Small changes cascade down the layers
+++++_ Layers often owned by different teams
+++++_ Layers often deployed seperately
+
 ++ Slice vertically
-+++ Layperson should be able to tell what a system does by looking at source code.
-
++++_ Layperson should be...
+++++_ able to tell what a system does
++++++_ by looking at the architecture.
++++++_ by looking at source code.
++++_ means...
+++++ hexagons
++++++_ based on business structure
+++++++_ Shipping
+++++++_ Customer Service
+++++++_ Inventory
+++++++_ Accounts
+++++++_ Invoicing
+++++_ thinking of services as..
++++++ Capabilities
+++++++_ which become...
++++++++ Bounded Contexts
+++++_ less likely to make changes that cross the service boundaries
+++++_ team becomes experts in inventory, shipping
+++++_ rather than... data access, API.
+++++ full stack engineers
 
 @endmindmap

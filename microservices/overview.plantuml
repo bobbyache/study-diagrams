@@ -1,0 +1,52 @@
+@startmindmap "Microservices"
+
++ Microservice\nDesign Patterns
+
+++ Async Communication
++++ Event-based Queues
+++++ Competing Workers Pattern
++++++_ processed by a single consumer
+++++ Fanout Pattern
++++++_ processed by all consumers
++++ API Request/Response
+++++_ Traditionally synchronous\nresults in blocking
+++++_ Alternative approach
++++++_ Request\\response with a\nregistered callback address
+
+++ Databases
++++ Function First (Top-down) Design
++++_ Synced via
+++++ Event Driven\nArchitecture
++++++ Event Sourcing
+++++++_ Replayability
++++++ Message Brokers
+++++++_ Eventual consistency
++++ CQRS
+++++_ Command service, write-only database
+++++_ Query service, reporting database
+
+++ API
++++ Architectural Style Options
+++++_ Prefer
++++++ Pragmatic REST
+++++++_ Stateless, cacheable,\nlayered, uniform interface
+++++++_ Is more functional, not\nas much CRUD (anemic)
++++ Architectural Patterns
+++++_ Facade
+++++_ Proxy
+++++_ Stateless Service
+
+-- Composition Patterns
+--- Broker
+----_ Async communication,\nqueue for task execution
+--- Chained
+----_ Request/response\nSynchronous
+--- Proxy
+----_ APIM or API Gateway
+----_ Forward to\napplicable service
+----_ Wrap security, rate limiting... etc.
+--- Aggregate
+--- Branch
+
+@endmindmap
+

@@ -1,53 +1,53 @@
 
-@startmindmap
-
-+ Microservices
+@startmindmap "Advantages"
 
 
-
-++ Advantages
-
-+++ System designs mirror organizational communication structure
-+++ Align architecture\nwith organization
-++++ means
-+++++ Align ownerships of assets\nto independent teams
-++++++ Team in SA does Shipping
-++++++ Team in UK does Inventory
-++++ allows
-+++++ Organization to manage rapid growth
-+++++ Dealing with teams in remote locations
-++++ matches
-+++++ Course grained communication of teams
-+++++ course grained integration between components
-++++ when not aligned
-+++++ creates tension
-
-+++ Release functionality faster
-++++ Less risk
-+++++ Deployment often
-+++++ Change one service
-
-+++ Independent scaling
-++++ Scale one service up or down as needed
-
-+++ Easier to focus on security concerns
-++++ Apply security where it is needed
-+++++ size to fit
-++++++ Sensitive services
-++++++ Less sensitive services
-
-+++ Adopt new technology faster
-++++ Seperate deployable units in
-+++++ Go
-+++++ Ruby
-+++++ NodeJS
-+++++ Java
-++++ Explore with less important components
-+++++ Small reporting dashboard
-
-+++ Embrace uncertain digital future
-++++ What type of interfaces, wearable devices to cater for?
-++++ with finer grained APIs
-+++++ more opportunity to adapt
++ Advantages
+++ System designs
++++_ mirror
+++++ organizational communication structure
+++ Align architecture\nwith organization
++++_ means
+++++ Align ownerships of assets\nto independent teams
++++++_ Team in SA does Shipping
++++++_ Team in UK does Inventory
++++_ allows
+++++ Organization to manage rapid growth
+++++ Teams in remote locations
++++_ matches
+++++ Course grained communication of teams
+++++ course grained integration between components
++++_ when not aligned
+++++ creates tension
+++ Release functionality faster
++++ Less risk
+++++_ Deployment often
+++++_ Change one service
+++ Independent scaling
++++_ Scale one service up or down as needed
+++ Security concerns
++++_ Apply security where\nand how it is needed
+++++ size to fit
++++++_ Sensitive services
++++++_ Less sensitive services
+++ Multiple technologies
++++_ Adopt new technology faster\nFaster innovation
+++++_ Seperate deployable units in
++++++_ Go
++++++_ Ruby
++++++_ NodeJS
++++++_ Java
+++++_ Explore with less important components
++++++_ Small reporting dashboard
+++ Embrace uncertain digital future
++++_ What type of interfaces\nfiner grained APIs
+++++_ wearable devices
++++++ GraphQL
+++++_ mobile applications
+++++_ web apps
++++++ REST
++++ Change
+++++_ more opportunity to adapt
+++++_ easier to replace
 
 @endmindmap

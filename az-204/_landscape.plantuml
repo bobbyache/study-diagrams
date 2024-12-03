@@ -17,6 +17,9 @@
 +++++_ Table
 +++++_ Apache Gremlin
 
++++ Redis
+++++ In-memory, open source, Key-value pair database
+++++_ caching data to improve performance
 ++ Security
 +++ Auth
 ++++_ MS Identity Platform

@@ -1,32 +1,23 @@
 
-@startmindmap
-
+@startmindmap "Principles"
 ' 12 factor app
 ' https://12factor.net/
 
-' + Microservices Principles
-' ++ Principle
-' +++ the idea
-' +++ Change lesss frequency
-' +++ Have an outcome you're trying to achieve
-' +++ The twelve factor horoko
-' +++ and in-house principles
-' ++++ must go towards what org is trying to achieve
-' ++ Practice
-' +++ Implementation of an idea
-' +++ Change frequently
-
-
 + Principles of Microservices
--- Modelled around the business domain
+-- Modelled around a business domain
 -- Highly observable
+---_ understand what is happening in the complex topology
 -- Isolate Failure
+---_ avoid/handle cascading failures  to achieve resliency
 -- Consumer first
+---_ Think from the outside, in!
 ++ Culture of automation
++++_ Large number of moving parts
 ++ Hide implementation details
-++ Deccentralize all things
++++_ Services must evolve independently from one another
+++ Decentralize all things
++++_ to enable autonomy
 ++ Deploy independently
-
-
++++_ change and release without side-effects 
 
 @endmindmap
