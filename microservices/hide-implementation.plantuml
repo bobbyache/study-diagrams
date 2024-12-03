@@ -1,0 +1,23 @@
+
+@startmindmap "Hide implementation"
+
++ Bounded Contexts
+
+++_ Explicit boundaries
++++_ Can nest within each other
+++_ Tells us what should be shared between each other
+++_ Tells us what should be hidden
+
++ Protocols
+
+++_ Is the protocol technology dependent?
+++_ Prefer...
++++ XML
++++ JSON
+++_ ... over binary and proprietary protocols (where possible)
+
++ Careful of Client Libraries
+++_ Prefer not to use them. 
++++_ Stick to network agnostic middleware and infrastructure.
+++_ Much more comfortable with duplicated code across services
+@endmindmap

@@ -1,0 +1,39 @@
+
+@startmindmap "Automation"
+
++ Automation
+
+++ Continuous Integration and Delivery
+
+++ API-driven Machine Provisioning
++++_ vagrant
++++_ vmware
++++_ Azure
++++_ Digital Ocean
+
+++ Configuration
++++_ Chef
++++_ Ansible
++++_ Puppet
+
+++ Custom Image Creation
++++_ Packer
+
+++ Platforms
++++_ Platform as a Service (PAAS)
+++++_ DEIS
+++++_ akka
+++++_ heroku
++++_ Infrastructure as a Service (IAAS)
+++++_ AWS
++++_ Container as a Service (CAAS)
+++++_ Docker Swarm
+++++_ CoreOS
+
+++ Declarative Environment Provisioning
++++_ Teraform
+
+++ Automated Testing
++++_ Test pyramid: Unit testing, Service testing, UI testing
+
+@endmindmap
